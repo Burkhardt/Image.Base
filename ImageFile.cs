@@ -11,7 +11,7 @@ using OperatingSystemCore;
 // 1.jpg => /1/1/1.jpg
 // 12345678 => /123/123456/12345678.jpg
 
-namespace RaiImage
+namespace RAI.Image
 {
     public static class Extensions
     {

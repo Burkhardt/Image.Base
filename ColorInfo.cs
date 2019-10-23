@@ -5,7 +5,7 @@ using OperatingSystemCore;
 //using Handy.DotNETCoreCompatibility.ColourTranslations;
 //using Handy.DotNETCoreCompatibility.ColourTranslations;
 
-namespace RaiImage
+namespace RAI.Image
 {
     /// <summary>
     /// ImageMagick compatible Color

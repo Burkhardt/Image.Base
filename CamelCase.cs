@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace RaiImage
+namespace RAI.Image
 {
     public static class StringHelper
 	{

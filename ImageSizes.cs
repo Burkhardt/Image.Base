@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace RaiImage
+namespace RAI.Image
 {
     public class ImageTypes
     {
