@@ -35,7 +35,6 @@ namespace Image.Base	// RSB
 		/// <summary>
 		/// Calculate angle between two colors in the color wheel
 		/// </summary>
-		/// <param name="originalColor"></param>
 		/// <param name="otherColor"></param>
 		/// <returns> IM wants it -100 .. 0 .. 100</returns>
 		public int Phi(Dye otherColor)

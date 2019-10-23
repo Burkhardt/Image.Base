@@ -4,4 +4,11 @@ Classes ImageFile, ImageTypes, Pane, Panes, Src and some helper classes and exte
 
 ## purpose
 
-simlifies the access of images in a file system (within dropbox or outside, windows or macOS or linux) 
+simplifies the access of images in a file system (within dropbox or outside, windows or macOS or linux).
+
+- ImageFile
+- ImageTreeFile
+- ImageTypes
+- Pane
+- Panes
+- Src

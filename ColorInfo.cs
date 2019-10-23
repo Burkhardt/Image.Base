@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using OperatingSystemCore;
 //using Handy.DotNETCoreCompatibility.ColourTranslations;
 //using Handy.DotNETCoreCompatibility.ColourTranslations;
 
@@ -15,7 +16,7 @@ namespace RaiImage
 		/// <summary>
 		/// get .Net, ImageMagick and JavaScript names translated - both directions
 		/// </summary>
-		/// <param name="NameOrHexCode">get the name this parameter starts with a #, otherwise get the hex code</param>
+		/// <param name="nameOrHexCode">get the name this parameter starts with a #, otherwise get the hex code</param>
 		/// <returns>null, if not found; otherwise the matching ColorInfo</returns>
 		public static ColorInfo Get(string nameOrHexCode)
 		{

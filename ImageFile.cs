@@ -4,6 +4,7 @@ using System.Threading;
 using System.IO.Compression;
 using System.Security.AccessControl;
 using System.Security.Principal;
+using OperatingSystemCore;
 
 // release notes: 
 // new min length = 1 for an ImageTreeFile, i.e.:
@@ -372,7 +373,6 @@ namespace RaiImage
             else ImageNumber = NoImageNumber;
         }
         /// <summary>get first file that is a match in the filesystem</summary>
-        /// <param name="file">current .Ext will be ignored</param>
         /// <param name="extensions">comma seperated string with extensions</param>
         /// <param name="colorInfo">null by default; will be wildcarded if null</param>
         /// <returns>false if no file exists for any passed-in extensions - extends the ImageTreeFile accordingly otherwise and returns true</returns>
@@ -430,15 +430,17 @@ namespace RaiImage
             TileTemplate = null;
             Parse();
         }
+        /*
         /// <summary>
         /// Destructor
         /// </summary>
         /// <remarks>close file handle if nobody did it before</remarks>
-        //~ImageFile()
-        //{
-        //    if (Image != null && Image.Tag != null)
-        //        ((MemoryStream)Image.Tag).Close();
-        //}
+        ~ImageFile()
+        {
+           if (Image != null && Image.Tag != null)
+               ((MemoryStream)Image.Tag).Close();
+        }
+        */
     }
     public class ImageTreeFile : ImageFile
     {
@@ -832,7 +834,7 @@ namespace RaiImage
         /// <summary>
         /// Optipng is an external program but included here as if it were a part of Imagemagick
         /// </summary>
-        /// <param name="imgFile"></param>
+        /// <param name="imgFileName"></param>
         /// <remarks>http://optipng.sourceforge.net/</remarks>
         /// <remarks>http://prdownloads.sourceforge.net/optipng/optipng-0.7.5-win32.zip?download</remarks>
         /// <returns>0 if ok, sth else otherwise => get error message from Message property</returns>
@@ -917,10 +919,14 @@ namespace RaiImage
         /// <param name="tileHeight">hight of a tile in permille to cut out of the master; 0..1000</param>
         /// <param name="resizeWidth">0 if no resize requested; in px</param>
         /// <param name="resizeHeight">0 if no resize requested; in px</param>
-        /// <param name="compression">ie "95%"</param>
+        /// <param name="adaptive">true|false</param>
+        /// <param name="quality">ie "95%"</param>
         /// <param name="strip">remove metainfo from tiles if true</param>
+        /// <param name="sharpen"></param>
+        /// <param name="asharpen"></param>
         /// <param name="unsharp">unsharpmask if sharpening is requested or else null; ie "1.2x0.9+1.5+0.04"</param>
         /// <param name="destFiles">complete path of destination file; has to contain %d</param>
+        /// <param name="deleteFirst">true|false</param>
         /// <returns>0 if IM call was successful; else errorcode</returns>
         public int CreateTiles(ImageTreeFile master, int tileWidth, int tileHeight, int resizeWidth, int resizeHeight, bool adaptive,
                             string quality, bool strip, string sharpen, string asharpen, string unsharp, ImageTreeFile destFiles, bool deleteFirst)
