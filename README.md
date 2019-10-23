@@ -1,4 +1,4 @@
-# RaiImage
+# RAI.Image
 
 Classes ImageFile, ImageTypes, Pane, Panes, Src and some helper classes and extensions.
 
