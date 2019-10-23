@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace Image.Base	// RSB
+namespace RaiImage
 {
-	/// <summary>
-	/// for ImageMagick 
-	/// </summary>
-	public class DyeDelta
+    /// <summary>
+    /// for ImageMagick 
+    /// </summary>
+    public class DyeDelta
 	{
 		public int DeltaB;
 		public int DeltaS;

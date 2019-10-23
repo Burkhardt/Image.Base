@@ -2,9 +2,10 @@ using System;
 using System.IO;
 using System.Threading;
 using System.IO.Compression;
+using OsLibCore;
+using RaiImage;
 using System.Security.AccessControl;
 using System.Security.Principal;
-using OperatingSystemCore;
 
 // release notes: 
 // new min length = 1 for an ImageTreeFile, i.e.:

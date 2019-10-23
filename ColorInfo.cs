@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using OperatingSystemCore;
-//using Handy.DotNETCoreCompatibility.ColourTranslations;
+using OsLibCore;
 //using Handy.DotNETCoreCompatibility.ColourTranslations;
 
-namespace RAI.Image
+namespace RaiImage
 {
     /// <summary>
     /// ImageMagick compatible Color
