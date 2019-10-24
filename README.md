@@ -16,3 +16,12 @@ simplifies the access of images in a file system.
 - Pane
 - Panes
 - Src
+
+## example
+
+    var count = ImageTreeFile.MoveToTree(
+                fromDir: p["from"], 
+                toDirRoot: p["to"], 
+                filter: p["filter"], 
+                remove: p["remove"]); 
+    Console.WriteLine($"{count} files moved.");
