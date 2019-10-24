@@ -12,7 +12,7 @@ using System.Security.Principal;
 // 1.jpg => /1/1/1.jpg
 // 12345678 => /123/123456/12345678.jpg
 
-namespace RAI.Image
+namespace RaiImage
 {
     public static class Extensions
     {
