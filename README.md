@@ -1,6 +1,6 @@
 # RaiImage
 
-Classes to manage image files in directory trees (within dropbox or outside, windows or macOS or linux).
+    Classes to manage image files in directory trees (within dropbox or outside, windows or macOS or linux).
 
 ## namespace
 
